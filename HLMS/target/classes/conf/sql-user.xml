@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+				  "dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<resultMap id="userResult" type="user">
+		<result property="userCode" column="USER_CODE" />
+	    <result property="id" column="ID"/>
+	    <result property="pw" column="PW"/>
+	    <result property="email" column="EMAIL"/>
+	    <result property="userImage" column="USER_IMAGE"/>
+	    <result property="name" column="NAME"/>
+	    <result property="birth" column="BIRTH" />
+	    <result property="postNum" column="POST_NUM"/>
+	    <result property="phoneCd" column="PHONE_CD"/>
+	    <result property="phoneNum" column="PHONE_NUM"/>
+	    <result property="address" column="ADDRESS"/>
+	    <result property="entDate" column="ENT_DATE" />
+	    <result property="connectDate" column="CONNECT_DATE" />
+	    <result property="nickName" column="NICK_NAME" />
+	    <result property="class2" column="CLASS2" />
+	    <result property="threeYn" column="THREE_YN" />
+	    <result property="phoneCdNm" column="PHONE_CD_NM" />
+	</resultMap>
+
+	<select id="retrieveUserList" resultMap="userResult">
+		<![CDATA[
+			SELECT * FROM TB_COM_USER
+		]]>
+	</select>
+
+	<select id="retrieveUser" parameterType="string" resultMap="userResult">
+		<![CDATA[
+			SELECT A.*
+			     , (SELECT COMM_CD_NM FROM TB_COM_CODE CC WHERE COMM_TY_CD = 'CODE0100' AND A.PHONE_CD = CC.COMM_CD) || '-' || A.PHONE_NUM AS PHONE_CD_NM
+		    FROM TB_COM_USER A WHERE ID = #{id}
+		]]>
+	</select>
+
+	<select id="retrieveUserByName" resultType="map" parameterType="map">
+		<![CDATA[
+			SELECT * FROM TB_COM_USER WHERE NAME = #{name}
+			AND GRADE = 'S'
+		]]>
+	</select>
+
+	<select id="retrieveUserId" parameterType="string" resultType="string">
+		<![CDATA[
+			SELECT ID FROM TB_COM_USER WHERE EMAIL = #{email}
+		]]>
+	</select>
+
+	<select id="retrieveSessionInfo" parameterType="string" resultMap="userResult">
+		<![CDATA[
+			SELECT USER_CODE
+				 , ID
+				 , GRADE
+				 , THREE_YN
+			FROM   TB_COM_USER WHERE ID = #{id}
+		]]>
+	</select>
+
+	<select id="retrieveUserPw" parameterType="map" resultType="string">
+		<![CDATA[
+			SELECT PW FROM TB_COM_USER WHERE ID = #{id} AND EMAIL = #{email}
+		]]>
+	</select>
+
+
+	<select id="logincheck" parameterType="map" resultType="string">
+		<![CDATA[
+			SELECT EMAIL FROM TB_COM_USER
+			WHERE ID = #{id} and PW = #{pw}
+		]]>
+	</select>
+
+	<insert id="createUser" parameterType="user">
+		<![CDATA[
+			INSERT INTO TB_COM_USER(
+					USER_CODE
+				  , ID
+				  , PW
+				  , EMAIL
+				  , USER_IMAGE
+				  , NAME
+				  , BIRTH
+				  , POST_NUM
+				  , PHONE_CD
+				  , PHONE_NUM
+				  , ADDRESS
+				  , ENT_DATE
+				  , GRADE
+				  , CONNECT_DATE
+				  , NICK_NAME
+				  , CLASS2
+				  ) VALUES(
+				  'USER' || LPAD(USER_SEQ.NEXTVAL, 6, 0)
+				  , #{id}
+				  , #{pw}
+				  , #{email}
+				  , #{userImage}
+				  , #{name}
+				  , #{birth}
+				  , #{postNum}
+				  , #{phoneCd}
+				  , #{phoneNum}
+				  , #{address}
+				  , TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+				  , #{grade}
+				  , TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+				  , #{nickName}
+				  , #{class2}
+				  )
+		]]>
+	</insert>
+
+	<update id="updateUser" parameterType="user">
+		<![CDATA[
+			UPDATE TB_COM_USER
+			SET	EMAIL       = #{email}
+			  , USER_IMAGE  = #{userImage}
+			  , NAME        = #{name}
+			  , BIRTH       = #{birth}
+			  , POST_NUM    = #{postNum}
+			  , PHONE_CD    = #{phoneCd}
+		      , PHONE_NUM   = #{phoneNum}
+		      , ADDRESS   = #{address}
+			  , NICK_NAME     = #{nickName}
+			  , CLASS2     = #{class2}
+			WHERE USER_CODE = #{userCode}
+		]]>
+	</update>
+
+	<update id="updateUserConnectedTime" parameterType="user">
+		<![CDATA[
+			UPDATE TB_COM_USER
+			SET	CONNECT_DATE       = TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+			WHERE USER_CODE = #{userCode}
+		]]>
+	</update>
+
+
+	<delete id="deleteUser" parameterType="string">
+		<![CDATA[
+			DELETE FROM TB_COM_USER WHERE ID = #{id}
+		]]>
+	</delete>
+
+	<select id="retrievePostByDong" resultType="map" parameterType="map">
+		<![CDATA[
+			/* retrievePostByDong */
+			SELECT ZIPCODE
+				 , SIDO
+				 , GUGUN
+				 , DONG
+				 , BUNJI
+				 , SEQ
+			FROM   TB_POST
+			WHERE  1=1
+			AND	   DONG LIKE '%' || #{dong} || '%'
+			AND    ROWNUM <= 20
+
+		]]>
+	</select>
+
+	<select id="retrieveRecentUserList" resultType="map" parameterType="map">
+		<![CDATA[
+			/* retrieveRecentUserList */
+			SELECT T.*
+			FROM
+			(
+			  SELECT USER_IMAGE
+			  	   , ID
+			  	   , CONNECT_DATE
+			  FROM TB_COM_USER
+			  ORDER BY CONNECT_DATE DESC
+			) T
+			WHERE ROWNUM BETWEEN 1 AND 5
+		]]>
+	</select>
+</mapper>

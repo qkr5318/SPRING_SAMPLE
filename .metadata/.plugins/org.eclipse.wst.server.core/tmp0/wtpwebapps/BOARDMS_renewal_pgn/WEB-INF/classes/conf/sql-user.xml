@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+				  "dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<resultMap id="userResult" type="user">
+		<result property="userCode" column="USER_CODE" />
+	    <result property="loginId" column="LOGIN_ID"/>
+	    <result property="pw" column="PW"/>
+	    <result property="email" column="EMAIL"/>
+	    <result property="name" column="NAME"/>
+	    <result property="birth" column="BIRTH" />
+	    <result property="phoneCd" column="PHONE_CD"/>
+	    <result property="phoneNum" column="PHONE_NUM"/>
+	    <result property="sex" column="SEX"/>
+	    <result property="entDate" column="ENT_DATE" />
+	    <result property="connectDate" column="CONNECT_DATE" />
+	</resultMap>
+
+	<select id="retrieveUserList" resultMap="userResult">
+		<![CDATA[
+			SELECT * FROM TB_COM_USER
+		]]>
+	</select>
+
+	<select id="retrieveUser" parameterType="string" resultMap="userResult">
+		<![CDATA[
+			SELECT * FROM TB_COM_USER WHERE LOGIN_ID = #{loginId}
+		]]>
+	</select>
+
+	<select id="retrieveUserId" parameterType="string" resultType="string">
+		<![CDATA[
+			SELECT LOGIN_ID FROM TB_COM_USER WHERE EMAIL = #{email}
+		]]>
+	</select>
+
+	<select id="retrieveSessionInfo" parameterType="string" resultMap="userResult">
+		<![CDATA[
+			SELECT USER_CODE
+				 , LOGIN_ID
+				 , GRADE
+			FROM   TB_COM_USER WHERE LOGIN_ID = #{loginId}
+		]]>
+	</select>
+
+	<select id="retrieveUserPw" parameterType="map" resultType="string">
+		<![CDATA[
+			SELECT PW FROM TB_COM_USER WHERE LOGIN_ID = #{loginId} AND EMAIL = #{email}
+		]]>
+	</select>
+
+
+	<select id="logincheck" parameterType="map" resultType="string">
+		<![CDATA[
+			SELECT EMAIL FROM TB_COM_USER
+			WHERE LOGIN_ID = #{loginId} and PW = #{pw}
+		]]>
+	</select>
+
+	<insert id="createUser" parameterType="user">
+		<![CDATA[
+			INSERT INTO TB_COM_USER(
+					USER_CODE
+				  , LOGIN_ID
+				  , PW
+				  , EMAIL
+				  , NAME
+				  , BIRTH
+				  , PHONE_CD
+				  , PHONE_NUM
+				  , SEX
+				  , ENT_DATE
+				  ) VALUES(
+				  'USER' || LPAD(USER_SEQ.NEXTVAL, 5, 0)
+				  , #{loginId}
+				  , #{pw}
+				  , #{email}
+				  , #{name}
+				  , #{birth}
+				  , #{phoneCd}
+				  , #{phoneNum}
+				  , #{sex}
+				  , TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+				  )
+		]]>
+	</insert>
+
+	<update id="updateUser" parameterType="user">
+		<![CDATA[
+			UPDATE TB_COM_USER
+			SET	PW       	= #{pw}
+			  , EMAIL       = #{email}
+			  , NAME        = #{name}
+			  , BIRTH       = #{birth}
+			  , PHONE_CD    = #{phoneCd}
+		      , PHONE_NUM   = #{phoneNum}
+			  , SEX    		= #{sex}
+			WHERE USER_CODE = #{userCode}
+		]]>
+	</update>
+
+	<update id="updateUserConnectedTime" parameterType="user">
+		<![CDATA[
+			UPDATE TB_COM_USER
+			SET	CONNECT_DATE       = TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI')
+			WHERE USER_CODE = #{userCode}
+		]]>
+	</update>
+
+
+	<delete id="deleteUser" parameterType="string">
+		<![CDATA[
+			DELETE FROM TB_COM_USER WHERE LOGIN_ID = #{loginId}
+		]]>
+	</delete>
+</mapper>
