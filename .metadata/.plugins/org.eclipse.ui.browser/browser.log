@@ -48,3 +48,6 @@
 1월 08, 2023 14:22:03.401 [16252:21208:0108/142203.400:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
 1월 08, 2023 14:57:11.700 [16252:21208:0108/145711.699:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -106
 1월 08, 2023 14:57:26.257 [16252:21208:0108/145726.257:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+
+1월 09, 2023 24:35:20.469 NEW SESSION
+1월 09, 2023 24:35:20.469 [23148:27148:0109/003520.465:ERROR:device_event_log_impl.cc(215)] [00:35:20.465] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
