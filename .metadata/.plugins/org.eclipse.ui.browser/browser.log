@@ -88,3 +88,7 @@
 1월 10, 2023 11:34:51.518 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
 1월 10, 2023 11:34:51.518 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
 1월 10, 2023 11:34:51.519 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+
+1월 11, 2023 24:18:03.737 NEW SESSION
+1월 11, 2023 24:18:03.737 [30104:20176:0111/001803.734:ERROR:device_event_log_impl.cc(215)] [00:18:03.734] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 11, 2023 24:27:36.966 [21532:27632:0111/002736.964:ERROR:device_event_log_impl.cc(215)] [00:27:36.964] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
