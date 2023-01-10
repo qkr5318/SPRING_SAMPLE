@@ -51,3 +51,40 @@
 
 1월 09, 2023 24:35:20.469 NEW SESSION
 1월 09, 2023 24:35:20.469 [23148:27148:0109/003520.465:ERROR:device_event_log_impl.cc(215)] [00:35:20.465] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+1월 10, 2023 11:10:16.121 NEW SESSION
+1월 10, 2023 11:10:16.122 [1592:1560:0110/111016.119:ERROR:device_event_log_impl.cc(215)] [11:10:16.119] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+1월 10, 2023 11:33:19.650 NEW SESSION
+1월 10, 2023 11:33:19.650 [1092:1900:0110/113319.648:ERROR:device_event_log_impl.cc(215)] [11:33:19.647] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 10, 2023 11:34:16.621 [1092:4192:0110/113416.619:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+1월 10, 2023 11:34:51.281 [1092:1900:0110/113451.281:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.282 [1092:1900:0110/113451.281:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.283 [1092:1900:0110/113451.281:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.284 [1092:1900:0110/113451.281:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.285 [1092:1900:0110/113451.281:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.354 [1092:1900:0110/113451.353:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.354 [1092:1900:0110/113451.354:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.355 [1092:1900:0110/113451.354:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.355 [1092:1900:0110/113451.354:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.356 [1092:1900:0110/113451.354:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.356 [1092:1900:0110/113451.354:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.443 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.444 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.445 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.446 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.447 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.448 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.449 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.450 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.451 [1092:1900:0110/113451.442:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.515 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.516 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.516 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.516 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.517 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.517 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.518 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.518 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.518 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 10, 2023 11:34:51.519 [1092:1900:0110/113451.515:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
