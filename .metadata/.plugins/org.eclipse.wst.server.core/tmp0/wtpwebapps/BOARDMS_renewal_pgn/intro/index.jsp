@@ -97,8 +97,9 @@
                 <!-- slide 1 start -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on" data-title="Slide 1">
 
-                <!-- main image -->
-                <img src="img/slide_01.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                <!-- main image  이미지 변경-->
+                <img src="img/hall.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+           <!-- <img src="img/slide_01.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
 
                 <!-- Translucent background -->
                 <div class="tp-caption dark-translucent-bg"
@@ -146,7 +147,8 @@
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-saveperformance="on" data-title="Slide 2">
 
                 <!-- main image -->
-                <img src="img/slide_02.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                <img src="img/santorini.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            <!--<img src="img/slide_2.jpg"  alt="slidebg2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
 
                 <!-- Translucent background -->
                 <div class="tp-caption dark-translucent-bg"

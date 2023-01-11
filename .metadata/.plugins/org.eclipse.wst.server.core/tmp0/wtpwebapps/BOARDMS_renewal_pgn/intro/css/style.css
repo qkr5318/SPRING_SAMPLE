@@ -3542,6 +3542,7 @@ a.overlay.small i {
 	-o-transition: all 0.2s ease-out;
 	-ms-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
+	color : lightgreen;
 }
 
 /* first level active menu items on hover/focus */
