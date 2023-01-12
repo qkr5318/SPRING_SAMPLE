@@ -32,7 +32,8 @@
 
     <!-- Fontello CSS -->
     <link href="fonts/fontello/css/fontello.css" rel="stylesheet">
-
+	<!-- vegas css -->
+	<link href="/intro/css/vegas.min.css">
     <!-- Plugins -->
     <link href="plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
     <link href="plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
@@ -207,11 +208,18 @@
       <!-- section start -->
       <!-- ================ -->
       <!-- section end -->
+     <div class="mp4_wrap">
+        <span class="mp4"></span>
+      </div>
+
+      <div class="mp4_wrap">
+        <span class="flex_vd1"></span>
+      </div>
 
 
       <!-- footer start (Add "light" class to #footer in order to enable light footer) -->
       <!-- ================ -->
-      <footer id="footer">
+      <footer id="footer"">
 
 
 
@@ -301,6 +309,9 @@
 
     <!-- Custom Scripts -->
     <script type="text/javascript" src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script type="text/javascript"src="/intro/js/vegas.min.js"></script>
+    <script type="text/javascript"src="/intro/js/jsp.js"></script>
 
   </body>
 </html>

@@ -24,6 +24,18 @@ about etc )
 
 /* 1 Typography
 ----------------------------------------------------------------------------- */
+
+  /* 베가스 영역 */
+.mp4_wrap {
+  width: 100% !important;
+  height:auto;
+
+  position: relative;
+  margin-top: 50px;
+}
+.mp4 {
+  width: 80% !important;
+}
 html {
 	height: 100%;
 }
@@ -204,6 +216,10 @@ hr.dark,
 #footer.light hr {
 	border-color: #dddddd;
 }
+#footer {
+	
+	background:lightgreen !important;
+}
 
 /* Lists
 ---------------------------------- */
@@ -326,7 +342,7 @@ tbody {
 	background-color: #ffffff;
 }
 .header-top {
-	background-color: #f1f1f1;
+	background-color: lightgreen;
 	border-bottom: 1px solid #dadada;
 	-webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.03) inset;
 	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.03) inset;
@@ -395,7 +411,7 @@ tbody {
 }
 .subfooter {
 	padding: 25px 0;
-	background-color: #000000;
+	background-color: ligntgreen;
 }
 .block {
 	padding-bottom: 40px;
@@ -1137,6 +1153,7 @@ tbody {
 ---------------------------------- */
 .subfooter {
 	font-size: 14px;
+	
 }
 .subfooter p {
 	margin: 0;
@@ -4144,6 +4161,7 @@ a.overlay.small i {
 .header-top .navbar.navbar-default {
 	margin: 0;
 	min-height: 30px;
+	background-color: lightgreen; 
 }
 .header-top .navbar-default .navbar-nav > li > a {
 	color: #999999;
@@ -4352,6 +4370,7 @@ a.overlay.small i {
 	min-height: 0;
 	background: transparent;
 	border-color: transparent;
+	margin-left: -50px
 }
 .subfooter .navbar-default .nav > li > a {
 	padding: 10px 10px;
